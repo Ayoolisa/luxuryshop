@@ -52,17 +52,17 @@ section {
   padding: 2rem 10%;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   height: .5rem;
   width: 1rem;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb{
-  background-color: var(--green);
+::-webkit-scrollbar-thumb {
+  background-color: var(--royal-gold);
   border-radius: 5rem;
 }
 
@@ -80,7 +80,12 @@ section{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.5); 
   padding: 1.5em;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar {
@@ -162,7 +167,6 @@ li, a {
   width: 1500px;
   background-color: var(--white);
   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
-  /* border-radius: 1rem; */
 }
 
 .shop__menu li a {
@@ -240,24 +244,202 @@ li, a {
   color:var(--royal-green);
 }
 
-.home{
-  display: inline-block;
-  align-items: flex-start;
-  margin-top: 14rem;
+.home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150%, 1fr));
+  align-items: center;
+  justify-content: center;
   font-size: 4rem;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  /* min-width: 2000px; */
+  padding: 2rem 10%;
+}
+
+.slide_container {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.slide__content {
+  margin: 0 4rem;
+  overflow: hidden;
+}
+
+.card {
+  display: block;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: transparent;
+}
+
+.image__content, 
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  text-align: center;
   color: var(--white);
 }
 
-.home .row{
+.card__content {
+  row-gap: 2rem;
+  position: absolute;
+}
+
+.card__content h3 {
+  font-size: 12rem;
+  color: var(--royal-green);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.card__content h1 {
+  font-size: 8rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.card__content p {
+  font-size: 4rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+
+}
+
+.image__content {
+  row-gap: 4rem;
+  position: relative;
+  padding: 3rem 0;
+}
+
+.card__img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.card__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1000;
+}
+
+.swiper-navBtn {
+  color: var(--royal-gold);
+  transition: color .3s ease;
+}
+
+.swiper-navBtn:hover {
+  color: var(--royal-green);
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 4rem;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev  {
+  left: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--royal-gold);
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--royal-green);
+}
+
+
+/* .home .row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap-reverse;
-  gap:1.5rem;
+  justify-content: center;
+  margin-top: 4rem;
+  font-size: 4rem;
+  color: var(--white);
+  position: relative;
+}
+
+.row .hero__img {
+  height: 100vh;
+  min-width: 2000px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: none;
+  position: absolute;
+  background: url('../Assets/woman\ fashion\ three.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
+
+.row .hero__img___2 {
+  background: url(../Assets/woman\ fashion\ two.jpg) no-repeat;
+}
+
+.hero__img img {
+  width: 200px;
+  display: none;
 }
 
 .home .row .content{
   flex:1 1 40rem;
   text-align: center;
+  background: transparent;
+}
+
+.row h3 {
+  text-transform: uppercase;
+  color: var(--royal-green);
+}
+
+.row h1 {
+  text-transform: capitalize;
+  color: var(--white );
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  border: 2px solid var(--white);
+  border-radius: 2rem;
+  color: var(--white);
+  font-size: 4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--royal-gold);
+  color: var(--royal-green);
+  border: 2px solid var(--royal-gold);
 }
 
 .home .row .image{
@@ -275,17 +457,43 @@ li, a {
   line-height: 1;
 }
 
+.sub__home {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-attachment: fixed;
+  background: url('../Assets/woman\ fashion\ one.jpg');
+  z-index: 1000;
+} */
 
-.img-slider  img {
+
+.section__products {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  font-size: 4rem;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 10%;
+  flex-flow: row wrap;
+}
+
+.img__slider  img {
   border-radius: 2rem;
   border-width: 0.2rem;
   border-style: none;
   display: inline-flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
   margin-left: 1rem;
-  margin-top: 9rem;
+  /* margin-top: 9rem; */
   object-fit: cover;
-  width: 18rem;
-  height: 20rem;
+  width: 20%;
+  height: 100%;
   animation-name: slider;
   animation-duration: 25s;
   animation-timing-function: ease-in-out;

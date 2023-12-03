@@ -1,31 +1,33 @@
-let menuBtn = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .flex .navbar');
+var swiper = new Swiper(".slide__content", {
+   slidesPerView: 3,
+   spaceBetween: 35,
+   loop: true,
+   centreSlide: true,
+   fade: true,
+   grabCursor: true,
+   pagination: {
+     el: ".swiper-pagination",
+     clickable: true,
+     dynamicBullets: true,
+   },
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
 
-menuBtn.onclick = () =>{
-   menuBtn.classList.toggle('fa-times');
-   navbar.classList.toggle('active');
-}
+   breakpoints: {
+       0: {
+           slidesPerView: 1,
+       },
+       520: {
+           slidesPerView: 2,
+       },
+       950: {
+           slidesPerView: 2,
+       },
 
-window.onscroll = () =>{
-   menuBtn.classList.remove('fa-times');
-   navbar.classList.remove('active');
-}
-
-var today = new Date();
-var hourNow = today.getHours();
-var greeting;
-
-if (hourNow >= 17){
-   greeting = "Good evening!";
-}
-else if (hourNow >= 12){
-   greeting = "Good afternoon!";
-}
-else if (hourNow > 0){
-   greeting = "Good morning!";
-}
-else {
-   greeting = "Welcome to the ShoppingHub!"
-}
-
-document.write('<h3>' + greeting + '<h3>');
+       1300: {
+           slidesPerView: 3,
+       },
+   },
+ });
