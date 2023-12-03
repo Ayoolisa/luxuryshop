@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+    :root {
+      --green: #00e77f;
+      --white: #fff;
+      --light-white: #aaa;
+      --black: #3d3d3d;
+      --light-bg: #4b4b4b;
+    }
+    * {
+      margin: 0;
+      padding: 0.3rem 0.3rem;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      transition: 0.2s linear;
+      text-transform: capitalize;
+    }
+    *::selection {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+    html {
+      font-size: 92.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      scroll-padding-top: 8rem;
+    }
+
+    ::-webkit-scrollbar {
+      height: 0.5rem;
+      width: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--green);
+      border-radius: 5rem;
+    }
+    body {
+      font-family: "Rubik", sans-serif;
+      background: var(--black);
+      background-position: center;
+      background-size: 1000px 1000px;
+      background-attachment: fixed;
+      object-fit: cover;
+      background-repeat: no-repeat;
+    }
+    header {
+      text-align: center;
+      color: #fbb917;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: var(--light-bg);
+    }
+
+    .header .flex {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header .flex .logo {
+      font-size: 2.5rem;
+      color: var(--white);
+    }
+
+    .header .flex .navbar a {
+      margin-left: 2rem;
+      color: var(--light-white);
+      font-size: 2.5rem;
+    }
+
+    .header .flex .navbar a:hover {
+      color: var(--green);
+    }
+    .header .flex .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    h3 {
+      color: var(--light-white);
+      text-decoration: underline;
+      margin-left: 0.5rem;
+      font-size: 15px;
+    }
+    h3:hover {
+      color: var(--green);
+    }
+    .sect {
+      margin: auto;
+      padding: 50px 40px;
+    }
+
+    div img {
+      max-width: 60%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      flex-flow: row;
+    }
+    img {
+      width: 450px;
+      height: 650px;
+      object-fit: cover;
+      border: none;
+      border-radius: 1.3rem;
+      border-style: hidden;
+      display: inline-flex;
+      flex-direction: row;
+      justify-self: center;
+      margin-top: 2rem;
+      box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.35);
+    }
+    img:hover {
+      background-color: var(--green);
+    }
+
+    #top,
+    a:hover {
+      color: black;
+    }
+    #top,
+    a:active {
+      opacity: 0.8;
+    }
+    .scroll {
+      text-transform: none;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      font-weight: 5rem;
+      border: none;
+      border-radius: 8rem;
+      background-color: #1ac87a;
+      position: absolute;
+      margin-top: 4rem;
+      left: 52rem;
+      color: white;
+      font-size: 1rem;
+      display: flex;
+    }
+    .scroll:hover {
+      color: #1ac87a;
+      background-color: white;
+    }
+    .orders {
+      margin-top: 7rem;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.35);
+      color: rgba(255, 255, 255, 0.97);
+      background-color: rgb(73, 78, 76);
+      padding: 10px 10px;
+      cursor: pointer;
+    }
+    .orders:hover {
+      color: rgb(73, 78, 76);
+      background-color: var(--green);
+    }
+    .orders:active {
+      opacity: 0.8;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Gents Fashion</h1>
+    </header>
+
+    <section class="sect">
+      <div>
+        <a
+          href="/images.html/Fashion/Men/B&W Striped Shirt and Short.jpg"
+          target="_blank"
+          ><img
+            src="/images.html/Fashion/Men/B&W Striped Shirt and Short.jpg"
+            alt="B&W Striped Shirt and Short"
+        /></a>
+        <h3>B&W Striped Shirt and Short</h3>
+        <a href="/images.html/Fashion/Men/Big Brown Pants.jpg" target="_blank"
+          ><img
+            src="/images.html/Fashion/Men/Big Brown Pants.jpg"
+            alt="Big Brown Pants"
+        /></a>
+        <h3>Big Brown Pants</h3>
+        <a href="/images.html/Fashion/Men//Black Shorts.jpg" target="_blank"
+          ><img
+            src="/images.html/Fashion/Men//Black Shorts.jpg"
+            alt="Black Shorts"
+        /></a>
+        <h3>Black Shorts</h3>
+        <a href="/images.html/Fashion/Men/Blazers.jpg" target="_blank"
+          ><img src="/images.html/Fashion/Men/Blazers.jpg" alt="Blazers"
+        /></a>
+        <h3>Blazers</h3>
+        <a href="/images.html/Fashion/Men/Brown Suit.jpg" target="_blank"
+          ><img src="/images.html/Fashion/Men/Brown Suit.jpg" alt="Brown Suit"
+        /></a>
+        <h3>Brown Suit</h3>
+        <a
+          href="/images.html/Fashion/Men/Colored Tee & Shorts.jpg"
+          target="_blank"
+          ><img
+            src="/images.html/Fashion/Men/Colored Tee & Shorts.jpg"
+            alt="Colored Tee & Shorts"
+        /></a>
+        <h3>Colored Tee & Shorts</h3>
+        <a
+          href="/images.html/Fashion/Men/Corduroy Yellow Shirt.jpg"
+          target="_blank"
+          ><img
+            src="/images.html/Fashion/Men/Corduroy Yellow Shirt.jpg"
+            alt="Corduroy Yellow Shirt"
+        /></a>
+        <h3>Corduroy Yellow Shirt</h3>
+        <a href="/images.html/Fashion/Men/Jacket & Pant.jpg" target="_blank"
+          ><img
+            src="/images.html/Fashion/Men/Jacket & Pant.jpg"
+            alt="Jacket & Pant"
+        /></a>
+        <h3>Jacket & Pant</h3>
+        <a
+          href="/images.html/Fashion/Men/Men Drawstring Hooded High Low Hem Tee.jpg"
+          target="_blank"
+          ><img
+            src="/images.html/Fashion/Men/Men Drawstring Hooded High Low Hem Tee.jpg"
+            alt="Men Drawstring Hooded High Low Hem Tee"
+        /></a>
+        <h3>Men Drawstring Hooded High Low Hem Tee</h3>
+      </div>
+    </section>
+
+    <button>
+      <a class="scroll" href="#">Scroll to Top</a>
+    </button>
+    <div>
+      <a href="#" style="text-decoration: none">
+        <h3 class="orders">Send in your Orders</h3></a
+      >
+    </div>
+  </body>
+</html>

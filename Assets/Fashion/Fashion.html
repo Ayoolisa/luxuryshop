@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Section</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+    :root {
+      --green: #00e77f;
+      --white: #fff;
+      --light-white: #aaa;
+      --black: #3d3d3d;
+      --light-bg: #4b4b4b;
+    }
+    * {
+      margin: 0;
+      padding: 0.3rem 0.3rem;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      transition: 0.2s linear;
+      text-transform: capitalize;
+    }
+    *::selection {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+    html {
+      font-size: 92.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      scroll-padding-top: 8rem;
+    }
+
+    ::-webkit-scrollbar {
+      height: 0.5rem;
+      width: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--green);
+      border-radius: 5rem;
+    }
+    body {
+      font-family: "Rubik", sans-serif;
+      background: var(--black);
+      background-position: center;
+      background-size: 1000px 1000px;
+      background-attachment: fixed;
+      object-fit: cover;
+      background-repeat: no-repeat;
+    }
+    header {
+      text-align: center;
+      color: #fbb917;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: var(--light-bg);
+    }
+
+    .header .flex {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header .flex .logo {
+      font-size: 2.5rem;
+      color: var(--white);
+    }
+
+    .header .flex .navbar a {
+      margin-left: 2rem;
+      color: var(--light-white);
+      font-size: 2.5rem;
+    }
+
+    .header .flex .navbar a:hover {
+      color: var(--green);
+    }
+    .header .flex .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    body {
+      background: url(/images.html/BG.jpg);
+      font-family: Arial, Helvetica, sans-serif;
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-color: rgb(66, 60, 66);
+    }
+
+    p {
+      color: #f1f1f1;
+      font-size: 1.5rem;
+      letter-spacing: 0.02rem;
+      font-weight: 500;
+      line-height: 2rem;
+      margin-left: 40px;
+    }
+    ul {
+      color: #f1f1f1;
+      list-style: none;
+      border: none;
+      border-style: double;
+      border-width: 2px;
+      border-radius: 25px;
+      flex-direction: row;
+      font-size: 1.4rem;
+      padding: auto;
+      font-weight: 550;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: rgba(76, 0, 0, 0.657);
+      margin: auto;
+      cursor: pointer;
+    }
+    li {
+      padding: 16px 16px;
+      transition: 0.15s;
+    }
+    .img-slider {
+      animation-name: slider;
+      animation-duration: 25s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      margin-top: 3rem;
+      width: 1600px;
+      transform: translate(-1600px);
+    }
+    @keyframes slider {
+      0% {
+        transform: translate(0px);
+      }
+      20% {
+        transform: translate(0px);
+      }
+      25% {
+        transform: translate(800px);
+      }
+      45% {
+        transform: translate(800px);
+      }
+      50% {
+        transform: translate(160px);
+      }
+      75% {
+        transform: translate(2400px);
+      }
+      95% {
+        transform: translate(2400px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+    .img-slider:hover {
+      animation-play-state: paused;
+    }
+
+    li :hover {
+      background-color: rgb(255, 255, 255);
+      color: rgba(76, 0, 0);
+    }
+    li :active {
+      opacity: 0.7;
+    }
+    a {
+      color: white;
+      padding: 22px 21px;
+      transition: 0.15s;
+    }
+    .scroll {
+      text-transform: none;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      font-weight: 5rem;
+      border: none;
+      border-radius: 8rem;
+      background-color: #1ac87a;
+      position: absolute;
+      margin-top: 4rem;
+      left: 52rem;
+      color: white;
+      font-size: 1rem;
+      display: flex;
+    }
+    .scroll:hover {
+      color: #1ac87a;
+      background-color: white;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Fashion</h1>
+    </header>
+    <section>
+      <div class="img-slider">
+        <span>
+          <ul>
+            <li>
+              <a
+                href="/images.html/Fashion/Men.html"
+                target="_blank"
+                style="text-decoration: none"
+                >Men</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/images.html/Fashion/Women/Women.html"
+                target="_blank"
+                style="text-decoration: none"
+                >Women</a
+              >
+            </li>
+            <li>
+              <a href="#Girls" target="_blank" style="text-decoration: none"
+                >Girls</a
+              >
+            </li>
+            <li>
+              <a href="#Boys" target="_blank" style="text-decoration: none"
+                >Boys</a
+              >
+            </li>
+            <li>
+              <a href="#Children" target="_blank" style="text-decoration: none"
+                >Children</a
+              >
+            </li>
+            <li>
+              <a href="#Unisex" target="_blank" style="text-decoration: none"
+                >Unisex</a
+              >
+            </li>
+            <li>
+              <a href="#Brands" target="_blank" style="text-decoration: none"
+                >Brands</a
+              >
+            </li>
+          </ul>
+        </span>
+      </div>
+    </section>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia corporis
+      illo tenetur quas recusandae. Qui veniam maiores sit, quis laudantium
+      ipsum error! Dolore esse sapiente labore aspernatur distinctio? Quis,
+      laudantium pariatur. Beatae dolore sint quidem dolor facilis dignissimos
+      iste in mollitia nulla sunt non voluptatem labore exercitationem a quas
+      obcaecati facere laborum maxime deleniti, adipisci libero explicabo
+      similique? Voluptatem ad, in hic non libero reiciendis nostrum
+      exercitationem saepe deleniti odit aut neque cupiditate consequatur quidem
+      vero illo facilis quos veritatis similique harum id eos. Soluta
+      consequatur, autem error deserunt aliquam, officia modi non minus
+      reprehenderit qui quod, ratione vel tenetur!
+    </p>
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatum
+      cum suscipit odio aliquid, aut possimus perspiciatis doloribus similique
+      officia voluptatem ipsam consequatur, veritatis sed minus cumque atque,
+      voluptate provident autem numquam? Earum provident tempora repellat,
+      asperiores odio laborum sed consectetur ullam! Totam in, odio dolores
+      asperiores earum aliquid accusantium autem laborum atque eum, blanditiis
+      eveniet mollitia. In fugit sint quis vero eligendi quos, magnam nisi
+      veritatis incidunt assumenda perferendis!
+    </p>
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima cupiditate
+      voluptatibus dolores rem pariatur error optio harum? Iure tempore eligendi
+      voluptatibus maxime repudiandae officia ut omnis, totam ipsam dolore
+      assumenda eum modi ratione quod sed cumque beatae voluptates dolores ex
+      asperiores. Excepturi maiores quo ullam perspiciatis, officia atque
+      distinctio hic?
+    </p>
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi debitis
+      impedit nihil assumenda perspiciatis explicabo, sunt minima, fugit ipsam
+      voluptates sit facere. Ratione, neque laborum? Non quaerat aliquam
+      consequuntur minus quasi perspiciatis facere ut, odit esse maiores modi
+      temporibus labore beatae incidunt cum nesciunt maxime reprehenderit,
+      repellendus aliquid! Doloribus odio aspernatur debitis voluptates autem
+      optio inventore dolorum, maxime possimus commodi?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vel harum
+      quia mollitia adipisci praesentium nemo blanditiis velit commodi nihil
+      laborum explicabo accusantium iste, nulla, dolorum sit quibusdam fuga
+      laudantium! Nihil ipsum neque similique voluptatem tempore amet dicta
+      minima omnis consectetur eius quaerat repudiandae libero impedit iure
+      rerum, excepturi accusamus et fugiat, assumenda eaque labore deleniti
+      quas! Autem facere, optio odio magnam quibusdam nobis inventore deleniti
+      consequatur ex quos sit, saepe placeat sapiente consequuntur nesciunt quod
+      corporis alias dolorem facilis delectus sint. Et ipsum facere alias amet,
+      veniam porro possimus!
+    </p>
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laboriosam
+      cumque impedit quasi adipisci voluptate minima voluptatem a consequatur
+      repellat, quaerat corrupti eaque esse natus iure assumenda inventore.
+      Tempora eaque ex voluptatibus temporibus, deleniti repellendus quas!
+      Perferendis, maxime provident. Animi?
+    </p>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    <button>
+      <a class="scroll" href="#">Scroll to Top</a>
+    </button>
+  </body>
+</html>

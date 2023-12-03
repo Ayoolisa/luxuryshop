@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragrance</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+    :root {
+      --green: #00e77f;
+      --white: #fff;
+      --light-white: #aaa;
+      --black: #3d3d3d;
+      --light-bg: #4b4b4b;
+    }
+    body {
+      font-family: "Rubik", sans-serif;
+      background-color: var(--black);
+      background-position: center;
+      background-size: 1000px 1000px;
+      background-attachment: fixed;
+      object-fit: cover;
+      background-repeat: no-repeat;
+    }
+    * {
+      margin: 0;
+      padding: 0.3rem 0.3rem;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      transition: 0.2s linear;
+      text-transform: capitalize;
+    }
+    *::selection {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+    html {
+      font-size: 92.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      scroll-padding-top: 8rem;
+    }
+
+    ::-webkit-scrollbar {
+      height: 0.5rem;
+      width: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--green);
+      border-radius: 5rem;
+    }
+    section {
+      margin-left: 3rem;
+    }
+    .header {
+      text-align: center;
+      color: gold;
+      position: fixed;
+      font-size: 2.5rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: var(--light-bg);
+    }
+
+    .header .flex {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header .flex .logo {
+      font-size: 2.5rem;
+      color: var(--white);
+    }
+
+    .header .flex .navbar a {
+      margin-left: 2rem;
+      color: var(--light-white);
+      font-size: 2.5rem;
+    }
+
+    .header .flex .navbar a:hover {
+      color: var(--green);
+    }
+    .header .flex .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    p {
+      color: #f1f1f1;
+      font-size: 1.5rem;
+      letter-spacing: 0.02rem;
+      font-weight: 500;
+      line-height: 2rem;
+      margin-left: 2rem;
+      margin-top: 5rem;
+    }
+    section img {
+      display: inline-block;
+      align-content: space-between;
+      border-radius: 1.8rem;
+      border-width: 0.02rem;
+      border-style: none;
+      margin-right: auto;
+      margin-top: 3rem;
+      image-rendering: optimizeQuality;
+      box-shadow: 5px 5px 10px rgb(0, 0, 0, 30%);
+      object-fit: cover;
+      width: 24rem;
+      height: 24rem;
+    }
+    img:hover {
+      background-color: var(--green);
+    }
+
+    .scroll {
+      text-transform: none;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      font-weight: 5rem;
+      border: none;
+      border-radius: 8rem;
+      background-color: #1ac87a;
+      position: absolute;
+      margin-top: 4rem;
+      left: 52rem;
+      color: white;
+      font-size: 1rem;
+      display: flex;
+    }
+    .scroll:hover {
+      color: #1ac87a;
+      background-color: white;
+    }
+    .orders {
+      margin-top: 7rem;
+      text-align: center;
+      text-decoration: none;
+      font-size: 2rem;
+      box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.35);
+      color: rgba(255, 255, 255, 0.97);
+      background-color: rgb(73, 78, 76);
+      padding: 10px 10px;
+      cursor: pointer;
+    }
+    .orders:hover {
+      color: rgb(73, 78, 76);
+      background-color: var(--green);
+    }
+    .orders:active {
+      opacity: 0.8;
+    }
+  </style>
+  <body>
+    <header class="header">Fragrance</header>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci hic
+      tempore sed modi totam veritatis rerum dolores amet enim, laboriosam
+      aliquam ad ut. Consequatur velit, quisquam, earum ullam eligendi saepe
+      mollitia molestias modi minima possimus recusandae non alias architecto
+      totam necessitatibus sed reiciendis? Ex pariatur amet vitae magnam,
+      repellendus eaque aspernatur illo, corporis consectetur velit aperiam.
+      Eveniet tenetur amet itaque. Modi ea voluptatibus esse corrupti.
+      Voluptatibus rerum consequatur amet reprehenderit magni eum? Quae dolorum
+      vitae, repellat fugiat fuga facilis voluptatem.
+    </p>
+    <p style="margin-top: 1.5rem">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsa esse
+      eum, quibusdam rerum assumenda praesentium sapiente deserunt laudantium,
+      architecto fugit facere dolor, error repellendus libero voluptatibus ullam
+      amet fuga eligendi vel tempore dolore nostrum unde. Culpa modi sed
+      veritatis incidunt repellat vitae deleniti ratione eius laboriosam
+      perferendis minima minus nam natus quae totam aliquid ut voluptatum illo
+      placeat, sunt dolorem similique voluptatem impedit voluptas. Laudantium,
+      quos. Recusandae?
+    </p>
+    <p style="margin-top: 1.5rem">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque minima
+      saepe placeat illo autem eveniet, quis officiis nihil voluptatem tempora
+      molestias, est tenetur perferendis alias in neque voluptatibus debitis?
+      Tempore, hic temporibus. At eaque laboriosam dolor facere. Quod maxime
+      nostrum, veniam exercitationem odit blanditiis quam fugiat eveniet
+      praesentium impedit excepturi assumenda. Dolore, eum corrupti.
+    </p>
+    <section>
+      <div>
+        <a href="/images.html/Fragrance/Fragrance/007. NATURAL SPRAY.jpg">
+          <img
+            src="/images.html/Fragrance/Fragrance/007. NATURAL SPRAY.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/ALLURE HOMME.jpg"
+          ><img src="/images.html/Fragrance/Fragrance/ALLURE HOMME.jpg" alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/AZURE NUIT RIFFS.jpg">
+          <img
+            src="/images.html/Fragrance/Fragrance/AZURE NUIT RIFFS.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/BLUE DE CHANEL.jpg"
+          ><img
+            src="/images.html/Fragrance/Fragrance/BLUE DE CHANEL.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/COCO NOIR CHANEL PARIS.jpg">
+          <img
+            src="/images.html/Fragrance/Fragrance/COCO NOIR CHANEL PARIS.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/COPPER COCONUT SANDS.jpg">
+          <img
+            src="/images.html/Fragrance/Fragrance/COPPER COCONUT SANDS.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/GENTLEMEN GIVENCHY.jpg">
+          <img
+            src="/images.html/Fragrance/Fragrance/GENTLEMEN GIVENCHY.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/GOLD INCENSE.jpg">
+          <img src="/images.html/Fragrance/Fragrance/GOLD INCENSE.jpg" alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/HUGO BOSS.jpg">
+          <img src="/images.html/Fragrance/Fragrance/HUGO BOSS.jpg" alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/IMPERIAL BLUE.jpg"
+          ><img src="/images.html/Fragrance/Fragrance/IMPERIAL BLUE.jpg" alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/L'INTERDIT GIVENCHY.jpg">
+          <img
+            src="/images.html/Fragrance/Fragrance/L'INTERDIT GIVENCHY.jpg"
+            alt=""
+        /></a>
+        <a
+          href="/images.html/Fragrance/Fragrance/Maison Francis Kurkdjian Paris.jpg"
+        >
+          <img
+            src="/images.html/Fragrance/Fragrance/Maison Francis Kurkdjian Paris.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Fragrance/Fragrance/VICTORIA'S SECRET.jpg">
+          <img
+            src="/images.html/Fragrance/Fragrance/VICTORIA'S SECRET.jpg"
+            alt=""
+        /></a>
+      </div>
+    </section>
+    <button>
+      <a class="scroll" href="#">Scroll to top</a>
+    </button>
+    <div>
+      <a href="#"> <h3 class="orders">Send in your Orders</h3></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phones & Tablets</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+      :root {
+        --green: #00e77f;
+        --white: #fff;
+        --light-white: #aaa;
+        --black: #3d3d3d;
+        --light-bg: #4b4b4b;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        background-color: var(--black);
+        background-position: center;
+        background-size: 1000px 1000px;
+        background-attachment: fixed;
+        object-fit: cover;
+        background-repeat: no-repeat;
+      }
+      * {
+        margin: 0;
+        padding: 0.3rem 0.3rem;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: 0.2s linear;
+        text-transform: capitalize;
+      }
+      *::selection {
+        background-color: var(--white);
+        color: var(--black);
+      }
+
+      html {
+        font-size: 92.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 8rem;
+      }
+
+      ::-webkit-scrollbar {
+        height: 0.5rem;
+        width: 1rem;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--green);
+        border-radius: 5rem;
+      }
+      section {
+        margin-left: 3rem;
+      }
+      .helix {
+        color: gold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: none;
+      }
+      .helix:hover {
+        color: var(--green);
+      }
+      .phone-stand {
+        color: gold;
+        font-size: 1.5rem;
+
+        text-decoration: none;
+        text-transform: none;
+      }
+      .phone-stand:hover {
+        color: var(--green);
+      }
+      .sound-wear {
+        color: gold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: none;
+      }
+      .sound-wear:hover {
+        color: var(--green);
+      }
+      .Bluetooth-earphone {
+        color: gold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: none;
+      }
+      .Bluetooth-earphone:hover {
+        color: var(--green);
+      }
+      .Wireless-Display-Adapter {
+        color: gold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: none;
+      }
+      .Wireless-Display-Adapter:hover {
+        color: var(--green);
+      }
+      .Wireless-Headphone {
+        color: gold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: none;
+      }
+      .Wireless-Headphone:hover {
+        color: var(--green);
+      }
+
+      .header {
+        text-align: center;
+        color: gold;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: var(--light-bg);
+      }
+
+      .header .flex {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header .flex .logo {
+        font-size: 2.5rem;
+        color: var(--white);
+      }
+
+      .header .flex .navbar a {
+        margin-left: 2rem;
+        color: var(--light-white);
+        font-size: 2.5rem;
+      }
+
+      .header .flex .navbar a:hover {
+        color: var(--green);
+      }
+      .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      p {
+        color: #f1f1f1;
+        font-size: 1.5rem;
+        letter-spacing: 0.02rem;
+        font-weight: 500;
+        line-height: 2rem;
+        margin-left: 2rem;
+        margin-top: 5rem;
+      }
+      section img {
+        display: inline-block;
+        align-content: space-between;
+        border-radius: 1.8rem;
+        border-width: 0.02rem;
+        border-style: none;
+        margin-right: auto;
+        margin-top: 3rem;
+        image-rendering: optimizeQuality;
+        box-shadow: 5px 5px 10px rgb(0, 0, 0, 30%);
+        object-fit: cover;
+        width: 24rem;
+        height: 24rem;
+      }
+      img:hover {
+        background-color: var(--green);
+      }
+      .scroll {
+        text-transform: none;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        font-weight: 5rem;
+        border: none;
+        border-radius: 8rem;
+        background-color: #1ac87a;
+        position: absolute;
+        margin-top: 4rem;
+        left: 52rem;
+        color: white;
+        font-size: 1rem;
+        display: flex;
+      }
+      .scroll:hover {
+        color: #1ac87a;
+        background-color: white;
+      }
+      .orders {
+        margin-top: 7rem;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2rem;
+        box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.35);
+        color: rgba(255, 255, 255, 0.97);
+        background-color: rgb(73, 78, 76);
+        padding: 10px 10px;
+        cursor: pointer;
+      }
+      .orders:hover {
+        color: rgb(73, 78, 76);
+        background-color: var(--green);
+      }
+      .orders:active {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Phones & Tablets</h1>
+    </header>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro fugit ut
+      quo, aliquam, asperiores eaque soluta temporibus autem, error amet quia
+      quis obcaecati? Nihil beatae optio laborum voluptate cum esse nostrum
+      aperiam ipsam quisquam repellat. Voluptatibus ducimus atque perferendis
+      vel qui error id alias tempora animi eius odio dicta, porro quibusdam et!
+      Veniam quam similique est aperiam blanditiis et ullam sunt dolorum amet
+      explicabo magnam accusantium officia, dolorem omnis nostrum ut reiciendis
+      harum minus cumque iste dolores nisi quod. Vero.
+    </p>
+    <p style="margin-top: 1.5rem">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugit
+      amet eius nisi atque recusandae perspiciatis, eum deserunt nesciunt in
+      maiores ut. Atque in neque, corporis vero fuga dignissimos id sed
+      recusandae quibusdam, consequatur molestias? Corrupti dolorum omnis in,
+      facilis dicta vel repellat explicabo animi eum veniam, quae laudantium,
+      adipisci fugit iste fuga harum quas labore voluptatem dolores? Similique,
+      illo!
+    </p>
+    <p style="margin-top: 1.5rem">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque voluptatum
+      enim neque nulla ratione ad id eos molestiae quos, modi optio aliquid
+      itaque? Dolor aliquid ipsum aut natus, cum, obcaecati dolorem magnam
+      cupiditate sint sunt possimus autem. Deleniti sit nesciunt incidunt beatae
+      provident! Consequuntur unde dicta placeat cupiditate est iure facilis
+      explicabo ut quam totam quis commodi veniam porro sint inventore voluptas
+      laboriosam perferendis, ducimus nostrum accusantium accusamus deleniti
+      optio ipsum tenetur? Quaerat nam praesentium nihil nisi dignissimos, cum
+      maiores quidem, debitis dolorum rerum nulla!
+    </p>
+    <section>
+      <div>
+        <a
+          href="/images.html/Phones & Tablets/Samsung s22 Ultra x Xiaomi Mi 11.jpg"
+        >
+          <img
+            src="/images.html/Phones & Tablets/Samsung s22 Ultra x Xiaomi Mi 11.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Boxed iPhone 13.jpg">
+          <img src="/images.html/Phones & Tablets/Boxed iPhone 13.jpg" alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/iPhone 12 Pro Max.jpg">
+          <img src="/images.html/Phones & Tablets/iPhone 12 Pro Max.jpg" alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Redmi  NOTE 11 4G.jpg">
+          <img src="/images.html/Phones & Tablets/Redmi  NOTE 11 4G.jpg" alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Redmi NOTE 10 LITE.jpg">
+          <img
+            src="/images.html/Phones & Tablets/Redmi NOTE 10 LITE.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Redmi NOTE 11 Pro.jpg"
+          ><img
+            src="/images.html/Phones & Tablets/Redmi NOTE 11 Pro.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Redmi NOTE10.jpg"
+          ><img src="/images.html/Phones & Tablets/Redmi NOTE10.jpg" alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Samsung A22.jpg">
+          <img src="/images.html/Phones & Tablets/Samsung A22.jpg" alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Samsung Galaxy A32.jpg">
+          <img
+            src="/images.html/Phones & Tablets/Samsung Galaxy A32.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Samsung Galaxy NOTE 21.jpg">
+          <img
+            src="/images.html/Phones & Tablets/Samsung Galaxy NOTE 21.jpg"
+            alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Samsung NOTE20.jpg">
+          <img src="/images.html/Phones & Tablets/Samsung NOTE20.jpg" alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Samsung s21 5G.jpg"
+          ><img src="/images.html/Phones & Tablets/Samsung s21 5G.jpg" alt=""
+        /></a>
+        <a href="/images.html/Phones & Tablets/Samsung s21.jpg"
+          ><img src="/images.html/Phones & Tablets/Samsung s21.jpg" alt=""
+        /></a>
+      </div>
+    </section>
+    <button>
+      <a class="scroll" href="#">Scroll to top</a>
+    </button>
+    <div>
+      <a href="#"> <h3 class="orders">Send in your Orders</h3></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Server</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+      :root {
+        --green: #00e77f;
+        --white: #fff;
+        --light-white: #aaa;
+        --black: #3d3d3d;
+        --light-bg: #4b4b4b;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        background-color: var(--black);
+        background-position: center;
+        background-size: 1000px 1000px;
+        background-attachment: fixed;
+        object-fit: cover;
+        background-repeat: no-repeat;
+      }
+      * {
+        margin: 0;
+        padding: 0.3rem 0.3rem;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: 0.2s linear;
+        text-transform: capitalize;
+      }
+      *::selection {
+        background-color: var(--white);
+        color: var(--black);
+      }
+
+      html {
+        font-size: 92.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 8rem;
+      }
+
+      ::-webkit-scrollbar {
+        height: 0.5rem;
+        width: 1rem;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--green);
+        border-radius: 5rem;
+      }
+      section {
+        margin-left: 3rem;
+      }
+      .header {
+        text-align: center;
+        color: gold;
+        position: fixed;
+        font-size: 2.3rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: var(--light-bg);
+      }
+
+      .header .flex {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header .flex .logo {
+        font-size: 2.5rem;
+        color: var(--white);
+      }
+
+      .header .flex .navbar a {
+        margin-left: 2rem;
+        color: var(--light-white);
+        font-size: 2.5rem;
+      }
+
+      .header .flex .navbar a:hover {
+        color: var(--green);
+      }
+      .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      p {
+        color: #f1f1f1;
+        font-size: 1.5rem;
+        letter-spacing: 0.02rem;
+        font-weight: 500;
+        line-height: 2rem;
+        margin-left: 2rem;
+        margin-top: 5rem;
+      }
+      #mode-of-payment {
+        background-color: var(--light-bg);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        display: flex;
+        margin-left: 3rem;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        font-size: 2rem;
+        color: var(--light-white);
+      }
+      #Cart {
+        text-transform: none;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        font-weight: 5rem;
+        border: none;
+        border-radius: 8rem;
+        background-color: gold;
+        position: absolute;
+        margin-top: 2rem;
+        margin-left: 11rem;
+        float: left;
+        left: 4rem;
+        color: white;
+        cursor: pointer;
+        font-size: 2rem;
+        display: flex;
+      }
+      #Cart:hover {
+        color: gold;
+        background-color: white;
+      }
+      #buy {
+        text-transform: none;
+        text-decoration: none;
+        padding: 0.55rem 1.55rem;
+        font-weight: 5rem;
+        border: none;
+        border-radius: 8rem;
+        background-color: rgb(221, 21, 21);
+        position: absolute;
+        margin-top: 2rem;
+        float: left;
+        left: 4rem;
+        color: white;
+        cursor: pointer;
+        font-size: 2rem;
+        display: flex;
+      }
+      #buy:hover {
+        color: var(--green);
+        background-color: white;
+      }
+      .box-container {
+        border-radius: 0.5rem;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: 3rem;
+        font-size: 2rem;
+        color: var(--green);
+      }
+      .box {
+        background-color: var(--light-bg);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        display: flex;
+        margin-left: 3rem;
+        left: 4rem;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        font-size: 2rem;
+        color: var(--green);
+      }
+      img {
+        width: 703px;
+        height: 97.5px;
+        margin-left: 3rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">Payment Gateway</header>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit pariatur
+      temporibus nesciunt tempora, impedit laborum eveniet consequatur maxime
+      esse neque recusandae sed quis a, itaque provident. Quod quae,
+      perspiciatis vitae, deleniti suscipit magni sapiente alias doloremque
+      magnam earum eaque quibusdam praesentium dolorem! Ea, obcaecati sapiente
+      quos aspernatur illo perspiciatis nesciunt quia quas reprehenderit est
+      totam quisquam veritatis dicta rerum dolor. Doloribus corrupti, odit
+      dolore id necessitatibus tenetur?
+    </p>
+    <div>
+      <img src="/images.html/Payment server/ALL CARDS.png" alt="" />
+    </div>
+    <form action="#">
+      <span class="box-container">Select Mode Of Payment</span>
+      <select name="Mode of Payment" id="mode-of-payment" required>
+        <option value="" disabled selected>Select Mode of Payment --</option>
+        <option value="visa card">Visa Card</option>
+        <option value="verve card">Verve Card</option>
+        <option value="master card">Master Card</option>
+        <option value="others">Others</option>
+      </select>
+      <form action="" method="post">
+        <span class="box-container">Card No --</span>
+        <input
+          type="number"
+          required
+          placeholder="enter your Card Num"
+          max="9999999999"
+          min="0"
+          name="number"
+          class="box"
+          onkeypress="if(this.value.length == 16) return false;"
+        />
+        <span class="box-container">CVV --</span>
+        <input
+          type="text"
+          required
+          min="0"
+          max="999"
+          placeholder="enter CVV"
+          onkeypress="if(this.value.length == 3) return false;"
+          name="name"
+          class="box"
+        />
+        <span class="box-container">EXP --</span>
+        <input
+          type="text"
+          required
+          min="0"
+          max="9999"
+          placeholder="enter Expiry Date"
+          onkeypress="if(this.value.length == 4) return false;"
+          name="name"
+          class="box"
+        />
+      </form>
+    </form>
+
+    <span>
+      <a href="/Shopping Cart.png" target="_blank">
+        <button id="Cart">Add to Cart</button></a
+      >
+      <a href="/shoppify.html" target="_blank"
+        ><button id="buy">Buy now</button></a
+      >
+    </span>
+  </body>
+</html>

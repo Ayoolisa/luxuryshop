@@ -1,0 +1,1000 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root {
+  --green: #00e77f;
+  --white: #fff;
+  --light-white: #aaa;
+  --black: #3d3d3d;
+  --light-bg: #4b4b4b;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--black);
+  background-position: center;
+  background-size: 1000px 1000px;
+  background-attachment: fixed;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+*::selection {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+html {
+  font-size: 92.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 5rem;
+}
+
+body {
+  background-color: var(--black);
+}
+header {
+  text-align: center;
+  color: #fbb917;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--light-bg);
+}
+
+.header .flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .flex .logo {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.header .flex .navbar a {
+  margin-left: 2rem;
+  color: var(--light-white);
+  font-size: 2.5rem;
+}
+
+.header .flex .navbar a:hover {
+  color: var(--green);
+}
+.header .flex .navbar.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+p {
+  margin-top: 6.5rem;
+  margin-left: 2rem;
+  color: #e6bf83;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  letter-spacing: 0.04rem;
+}
+section .main-box{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 10px;
+    display: inline-block;
+    align-content: space-between;
+}
+
+
+.box img {
+    border-radius: 1.8rem;
+    position: relative;
+    border-width: 0.4rem;
+    border-style: hidden;
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: 3rem;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 30%);
+    object-fit: cover;
+    width: 24rem;
+    height: 24rem;
+    transition: 1s;
+}
+.box-cart {
+    width: 20%;
+    font-size: 20px;
+    border-width: 0.4rem;
+    border-radius: 1.8rem;
+    border-style: hidden;
+    padding: 0.5rem 0.45em;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: var(--black);
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 1s;
+}
+
+.box:hover .box-cart {
+    bottom: 0px;
+    opacity: 1;
+    color: rgb(74, 60, 41);
+}
+
+.box:active .box-cart {
+    color: var(--green);
+}
+
+.scroll {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: #1ac87a;
+  position: absolute;
+  margin-top: 4rem;
+  left: 51rem;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+}
+.scroll:hover {
+  color: #1ac87a;
+  background-color: white;
+}
+.orders {
+  margin-top: 7rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.97);
+  background-color: rgb(73, 78, 76);
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.orders:hover {
+  color: rgb(73, 78, 76);
+  background-color: var(--green);
+}
+.orders:active {
+  opacity: 0.8;
+}
+
+#Cart1 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart1:hover {
+  color: gold;
+  background-color: white;
+}
+#buy1 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy1:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart2 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart2:hover {
+  color: gold;
+  background-color: white;
+}
+#buy2 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy2:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart3 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart3:hover {
+  color: gold;
+  background-color: white;
+}
+#buy3 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy3:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart4 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart4:hover {
+  color: gold;
+  background-color: white;
+}
+#buy4 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy4:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart5 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart5:hover {
+  color: gold;
+  background-color: white;
+}
+#buy5 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy5:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart6 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart6:hover {
+  color: gold;
+  background-color: white;
+}
+#buy6 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy6:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart7 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart7:hover {
+  color: gold;
+  background-color: white;
+}
+#buy7 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy7:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart8 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart8:hover {
+  color: gold;
+  background-color: white;
+}
+#buy8 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy8:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart9 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart9:hover {
+  color: gold;
+  background-color: white;
+}
+#buy9 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy9:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart10 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart10:hover {
+  color: gold;
+  background-color: white;
+}
+#buy10 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy10:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart11 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart11:hover {
+  color: gold;
+  background-color: white;
+}
+#buy11 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy11:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart12 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart12:hover {
+  color: gold;
+  background-color: white;
+}
+#buy12 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy12:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart13 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart13:hover {
+  color: gold;
+  background-color: white;
+}
+#buy13 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy13:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart14 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart14:hover {
+  color: gold;
+  background-color: white;
+}
+#buy14 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy14:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart15 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart15:hover {
+  color: gold;
+  background-color: white;
+}
+#buy15 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy15:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart16 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart16:hover {
+  color: gold;
+  background-color: white;
+}
+#buy16 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy16:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart17 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart17:hover {
+  color: gold;
+  background-color: white;
+}
+#buy17 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 6.9rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy17:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart18 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart18:hover {
+  color: gold;
+  background-color: white;
+}
+#buy18 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 33.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy18:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart19 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart19:hover {
+  color: gold;
+  background-color: white;
+}
+#buy19 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 59.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy19:hover {
+  color: var(--green);
+  background-color: white;
+}
+#Cart20 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: gold;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 7.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#Cart20:hover {
+  color: gold;
+  background-color: white;
+}
+#buy20 {
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.55rem 1.55rem;
+  font-weight: 5rem;
+  border: none;
+  border-radius: 8rem;
+  background-color: rgb(221, 21, 21);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 86.7rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+}
+#buy20:hover {
+  color: var(--green);
+  background-color: white;
+}
