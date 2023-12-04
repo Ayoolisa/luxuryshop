@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shoppifyhub</title>
+    <title>LuxuryShop</title>
+
+    <!-- swiper cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"
+    />
+
+    <!-- custom swiper cdn file link  -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
     <link
@@ -103,116 +112,166 @@
     <!-- home section starts here  -->
 
     <section class="home">
-      <div class="slide_container swiper">
-        <div class="slide__content">
-          <div class="card__wrapper swiper__wrapper">
-            <div class="card swiper__slide">
-              <div class="image__content">
-                <div class="card__img">
-                  <img src="Assets/woman fashion one.jpg" alt="" />
-                </div>
+      <div class="card">
+        <div class="row">
+          <div class="image__content">
+            <img src="Assets/woman fashion one.jpg" alt="" />
 
-                <div class="card__content">
-                  <h3>new arrivals</h3>
-                  <h1>the latest fashion trends</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam, voluptatum.
-                  </p>
-                  <a href="#" class="btn">shop now</a>
-                </div>
-              </div>
+            <div class="card__content">
+              <h3>new arrivals</h3>
+              <h1>the latest fashion trends</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, voluptatum.
+              </p>
+              <a href="#" class="btn">shop now</a>
             </div>
+          </div>
 
-            <div class="card swiper__slide">
-              <div class="image__content">
-                <div class="card__img">
-                  <img src="Assets/woman fashion two.jpg" alt="" />
-                </div>
+          <div class="image__content">
+            <img src="Assets/woman fashion two.jpg" alt="" />
 
-                <div class="card__content">
-                  <h3>new arrivals</h3>
-                  <h1>the latest fashion trends</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam, voluptatum.
-                  </p>
-                  <a href="#" class="btn">shop now</a>
-                </div>
-              </div>
+            <div class="card__content">
+              <h3>new arrivals</h3>
+              <h1>the latest fashion trends</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, voluptatum.
+              </p>
+              <a href="#" class="btn">shop now</a>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="swiper-button-next  swiper-navBtn"></div>
-      <div class="swiper-button-prev  swiper-navBtn"></div>
-      <div class="swiper-pagination"></div>
-      <!-- <div class="row">
-        <div class="hero__img">
-          <img src="Assets/woman fashion two.jpg" alt="" />
-          <h3>new arrivals</h3>
-          <h1>the latest fashion trends</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum.
-          </p>
-          <a href="#" class="btn">shop now</a>
-        </div>
-        <div class="hero__img___2">
-          <h3>new arrivals</h3>
-          <h1>the latest fashion trends</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum.
-          </p>
-          <a href="#" class="btn">shop now</a>
-        </div>
-      </div> -->
     </section>
+
     <!-- home section ends here  -->
 
-    <!-- sub home section starts here  -->
-
-    <!-- <section class="sub__home">
-      <section class="home">
-        <div class="row">
-          <div class="hero__img">
-            <img src="Assets/woman fashion two.jpg" alt="" />
-            <h3>new arrivals</h3>
-            <h1>the latest fashion trends</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatum.
-            </p>
-            <a href="#" class="btn">shop now</a>
-          </div>
-          <div class="hero__img___2">
-            <h3>new shoes</h3>
-            <h1>the latest fashion trends</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatum.
-            </p>
-            <a href="#" class="btn">shop now</a>
-          </div>
-        </div>
-      </section>
-    </section> -->
-
+    <!-- section__products starts here  -->
 
     <div class="section__products">
-      <div class="img__slider">
-        <img src="./Assets/woman fashion seven.jpg" alt="">
-        <img src="./Assets/woman fashion six.jpg" alt="">
-        <img src="./Assets/woman fashion five.jpg" alt="">
-        <img src="./Assets/woman fashion four.jpg" alt="">
-        <img src="./Assets/woman fashion three.jpg" alt="">
-        <img src="./Assets/woman fashion two.jpg" alt="">
-        <img src="./Assets/woman fashion one.jpg" alt="">
-        <img src="./Assets/woman fashion four.jpg" alt="">
+      <div class="slide__container">
+        <div class="img__slider">
+          <img src="./Assets/woman fashion seven.jpg" alt="" />
+          <img src="./Assets/woman fashion six.jpg" alt="" />
+          <img src="./Assets/woman fashion five.jpg" alt="" />
+          <img src="./Assets/woman fashion four.jpg" alt="" />
+          <img src="./Assets/woman fashion three.jpg" alt="" />
+          <img src="./Assets/woman fashion two.jpg" alt="" />
+          <img src="./Assets/woman fashion one.jpg" alt="" />
+          <img src="./Assets/woman fashion eight.jpg" alt="" />
+        </div>
       </div>
     </div>
+
+    <section class="gallery__wrapper mySwiper">
+      <h2>new arrivals</h2>
+      <div class="slide__container swiper-wrapper">
+        <div class="gallery">
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion eight.jpg" alt="" class="active" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion seven.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion six.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion five.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion four.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion three.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion two.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion one.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./Assets/woman fashion nine.jpg" alt="" />
+            <h3>the hotlist</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              pariatur fugiat delectus quos ratione fuga, eos a dolorum
+              dignissimos earum consequuntur commodi est fugit assumenda totam
+              obcaecati consequatur cum officia?
+            </p>
+            <a href="#" class="btn">learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section__products ends here  -->
 
     <!-- custom js file link  -->
     <script src="./js/script.js"></script>
