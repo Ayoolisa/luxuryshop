@@ -11,10 +11,11 @@
 }
 
 * {
-   margin:0; padding:0;
+   margin: 0; 
+   padding: 0;
    box-sizing: border-box;
    outline: none; 
-   border:none;
+   border: none;
    list-style: none;
    text-decoration: none;
    transition: .2s linear;
@@ -25,10 +26,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--white);
   background-position: center;
-  background-size: 1000px 1000px;
   background-attachment: fixed;
-  object-fit: cover;
-  background-repeat: no-repeat;
+  /* background: url('../Assets/woman\ fashion\ twelve.jpg') no-repeat; */
+  overflow: hidden;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  color: var(--white);
 }
 
 body::before {
@@ -37,7 +40,7 @@ body::before {
 
 *::selection {
   background-color: var(--white);
-  color:var(--black);
+  color: var(--white);
 }
 
 html {
@@ -80,10 +83,9 @@ section{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5); 
+  /* background-color: rgba(255, 255, 255, 0.254);  */
   padding: 1.5em;
   background-attachment: fixed;
-  backdrop-filter: blur(10px);
   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
   transition: all 0.3s ease-in-out;
 }
@@ -245,88 +247,120 @@ li, a {
 }
 
 .home {
-  margin-top: 7rem;
   position: relative;
- 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-  width: 2000px;
+  width: 2000px; 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   height: 100%;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2rem;
-  background-color: var(--light-bg);
+  min-width: 100%;
+  margin-top: 8rem;
+  padding: 4rem 0;
 }
 
 .card {
   position: relative;
   height: 100vh;
   z-index: 1;
-  margin: 4rem 0;
-  margin-bottom: 2rem;
-  overflow: hidden; 
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-position: center;
+  background-attachment:scroll;
+  background: url('../Assets/header_bg.png') no-repeat;
+  background-size: cover;
+}
+
+.card__content {
   display: flex;
-  flex-wrap: wrap;
+  position: relative;
   flex-direction: column;
-}
-
-.image__content, 
-.card__content {
-  /* display: flex;
-  flex-direction: column; */
+  height: 100%;
+  width: 100%;
+  row-gap: 1rem;
+  text-align: justify;
+  width: 50%;
+  z-index: 1000;
   justify-content: center;
-  align-items: center;
-  padding: 3rem 2rem;
-  text-align: center;
-  row-gap: 2rem;
-  text-align: center;
-  color: var(--white);
+  align-items: first baseline;
+  margin-left: 40%;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.card__content {
-  row-gap: 2rem;
-  position: absolute;
+.card__content:hover {
+  backdrop-filter: blur(10px);
 }
 
 .card__content h3 {
   font-size: 8rem;
   color: var(--royal-green);
-  line-height: 1.2;
   text-transform: uppercase;
 }
 
+.card__content h3::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  z-index: 1;
+  top: 33%;
+  left: 2rem;
+  background-color: var(--royal-green);
+  right: 0;
+  height: 1rem;
+  border-radius: 5rem;
+  transform: scaleX(0);
+  transition: all .5s linear;
+}
+
+.card__content h3:hover::before {
+  width: 60%;
+  transform: scaleX(1);
+}
+
 .card__content h1 {
-  font-size: 4rem;
-  line-height: 1.2;
+  font-size: 5rem;
   text-transform: capitalize;
+}
+
+.card__content h1::before {
+  content: '';
+  display: flex;
+  position: absolute;
+  width: 0;
+  bottom: 55%;
+  z-index: -1;
+  height: 8%;
+  background-color: var(--royal-gold);
+  transition: all .5s ease-in-out;
+}
+
+.card__content h1:hover::before {
+  width: 70%;
 }
 
 .card__content p {
   font-size: 3rem;
-  line-height: 1.2;
   text-transform: capitalize;
 }
 
-.image__content {
-  row-gap: 4rem;
-  position: relative;
-  height: 100%;
-  width: 2000px;
-  padding: 3rem 0;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
-
-
-.image__content img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.card__content p::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1000;
+  width: 100%;
+  bottom: 35%;
+  z-index: -1;
+  height: 0;
+  background-color: var(--royal-green);
+  transition: all .5s ease-in-out;
 }
+
+.card__content p:hover::before {
+  height: 20%;
+}
+
 
 .swiper-navBtn {
   color: var(--royal-gold);
@@ -369,9 +403,8 @@ li, a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--light-white);
   padding: 2rem;
-  /* background-color: transparent; */
+  background-color: var(--white);
 }
 
 .gallery__wrapper h2 {
@@ -384,6 +417,27 @@ li, a {
   letter-spacing: 5px;
   transition: .5s;
 }
+
+.gallery__wrapper h2::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  z-index: 1;
+  top: 58%;
+  left: 2rem;
+  background-color: var(--royal-green);
+  right: 0;
+  height: 1rem;
+  border-radius: 5rem;
+  transform: scaleX(0);
+  transition: all .5s linear;
+}
+
+.gallery__wrapper h2:hover::before {
+  transform: scaleX(1);
+  width: 60%;
+}
+
 
 .slide__container {
   position: relative;
@@ -436,7 +490,7 @@ li, a {
   position: absolute;
   text-align:start;
   top: 0;
-  left: 50%;
+  left: 40%;
   transform: translate(10%, 50%);
   opacity: 0;
   transition: all 0.3s ease-in-out;
@@ -448,32 +502,37 @@ li, a {
 }
 
 .swiper-slide p {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--light-bg);
   position: absolute;
   text-align:start;
-  top: 50%;
-  left: 50%;
-  transform: translate(5%, -50%);
+  top: 40%;
+  left: 43%;
+  transform: translate(0, -50%);
 }
 
 .swiper-slide .btn{
+  font-size: 3rem;
   position: absolute;
-  top: 80%;
-  left: 64%;
+  top: 60%;
+  left: 51%;
   transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  color: var(--royal-gold);
+  border: .3rem solid var(--royal-gold);
 }
 
 .gallery {
   overflow: scroll;
+  scroll-snap-type:proximity;
   width: 100%;
   margin: 2rem;
   display: flex;
 }
 
 .swiper-slide img {
-  height: 100%;
-  width: 50%;
+  height: 80%;
+  width: 40%;
   padding: 2rem;
   margin: 4rem 0;
   object-fit: cover;
@@ -486,9 +545,9 @@ li, a {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   border: 2px solid var(--white);
-  border-radius: 2rem;
+  border-radius: 1rem;
   color: var(--white);
   font-size: 4rem;
   text-transform: uppercase;
@@ -506,7 +565,7 @@ li, a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1500px;
+  max-width: 2000px;
   align-items: center;
   padding: 2rem;
 }
