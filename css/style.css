@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:500,700,800);
+@import url(https://fonts.googleapis.com/css?family=Elsie+Swash+Caps);
+@import url(https://fonts.googleapis.com/css?family=Metamorphous);
 
 :root{
    --green:#00E77F;
@@ -27,7 +29,6 @@ body {
   background-color: var(--white);
   background-position: center;
   background-attachment: fixed;
-  /* background: url('../Assets/woman\ fashion\ twelve.jpg') no-repeat; */
   overflow: hidden;
   background-size: cover;
   backdrop-filter: blur(10px);
@@ -55,6 +56,43 @@ section {
   padding: 2rem 10%;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  border: 2px solid var(--white);
+  border-radius: 1rem;
+  color: var(--white);
+  font-size: 4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--royal-green);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 1%;
+  height: 100%;
+  width: 0;
+  left: 0;
+  z-index: -1000;
+  color: var(--royal-green);
+  background-color: var(--royal-gold);
+  transition: all .5s ease-in-out;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
 ::-webkit-scrollbar {
   height: .5rem;
   width: 1rem;
@@ -69,21 +107,13 @@ section {
   border-radius: 5rem;
 }
 
-section{
-  max-width: 2000px;
-  margin:0 auto;
-  padding: 2rem 10%;
-}
-
-
 .header {
   position: fixed;
   top:0; left:0; right:0;
   z-index: 1000;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   align-items: center;
-  /* background-color: rgba(255, 255, 255, 0.254);  */
   padding: 1.5em;
   background-attachment: fixed;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
@@ -235,7 +265,7 @@ li, a {
   display: flex;
 }
 
-.fa-search {
+.btn__div .fa-search {
   font-size: 3rem;
   background: transparent;
   color: var(--royal-gold);
@@ -256,7 +286,7 @@ li, a {
   justify-content: space-evenly;
   align-items: center;
   min-width: 100%;
-  margin-top: 8rem;
+  margin-top: 7.5rem;
   padding: 4rem 0;
 }
 
@@ -310,7 +340,6 @@ li, a {
   background-color: var(--royal-green);
   right: 0;
   height: 1rem;
-  border-radius: 5rem;
   transform: scaleX(0);
   transition: all .5s linear;
 }
@@ -408,6 +437,7 @@ li, a {
 }
 
 .gallery__wrapper h2 {
+  position: relative;
   font-size: 8rem;
   display: flex;
   color: var(--royal-gold);
@@ -421,21 +451,19 @@ li, a {
 .gallery__wrapper h2::before {
   content: '';
   position: absolute;
-  width: 50%;
+  width: 90%;
   z-index: 1;
-  top: 58%;
-  left: 2rem;
-  background-color: var(--royal-green);
-  right: 0;
+  top: 80%;
+  left: 0;
+  background-color: var(--royal-gold);
   height: 1rem;
-  border-radius: 5rem;
   transform: scaleX(0);
   transition: all .5s linear;
 }
 
 .gallery__wrapper h2:hover::before {
   transform: scaleX(1);
-  width: 60%;
+  width: 100%;
 }
 
 
@@ -521,6 +549,13 @@ li, a {
   color: var(--royal-gold);
   border: .3rem solid var(--royal-gold);
 }
+.swiper-slide .btn:hover {
+  color: var(--royal-green);
+}
+
+.swiper-slide .btn::before {
+  z-index: -1;
+}
 
 .gallery {
   overflow: scroll;
@@ -538,27 +573,6 @@ li, a {
   object-fit: cover;
   border-radius: 4rem;
   cursor: pointer;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  padding: 1rem 3rem;
-  border: 2px solid var(--white);
-  border-radius: 1rem;
-  color: var(--white);
-  font-size: 4rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background-color: var(--royal-gold);
-  color: var(--royal-green);
-  border: 2px solid var(--royal-gold);
 }
 
 .section__products {
@@ -617,13 +631,226 @@ li, a {
   animation-play-state: paused;
 }
 
-.swiper-slide::before {
-  content: "";
-  font-size: 150px;
+.new__arr {
+  width: 3400px;
+  height: 140vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135%, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100%, 1fr));
+  overflow: hidden;
+  margin: 4rem auto;
+}
+
+
+.new__arr .container {
+  display: flex;
+  flex: 1;
+  width: 2000px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem 10%;
+}
+
+.col__1 {
   position: absolute;
-  z-index: 12;
-  color: rgba(255, 255, 255, 0);
-  left: 300px;
-  top: 80px;
-  transition: 1s all ease-in-out;
+  background: url(../Assets/new_arrival_bg.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: .5rem;
+  top: 0;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  min-width: 1000px;
+  transition: all 0.3s ease-in-out;
+}
+
+.col__1 h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: var(--black);
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-weight: 100;
+}
+
+.col__1 p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--light-bg);
+  position: absolute;
+  top: 18%;
+  width: 50%;
+  left: 5%;
+  font-weight: 100;
+}
+
+.col__1 p::first-letter {
+  text-transform: capitalize;
+}
+
+.col__2 {
+  position: absolute;
+  background: url(../Assets/woman\ fashion\ two.jpg);
+  background-size: cover;
+  border-radius: .5rem;
+  background-position: center;
+  min-width: 500px;
+  height: 80vh;
+  top: 0;
+  left: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transition: all 0.3s ease-in-out;  
+}
+
+.col__2 h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: var(--white);
+  position: absolute;
+  top: 90%;
+  left: 5%;
+  font-weight: 100;
+}
+
+.col__3 {
+  position: absolute;
+  background: url(../Assets/accessories\ \(2\).jpg);
+  background-size: cover;
+  border-radius: .5rem;
+  border: .2rem dotted var(--black);
+  background-position: center;
+  min-width: 720px;
+  height: 50vh;
+  top: 65%;
+  left: 4%;
+  row-gap: 1rem;
+  padding: 2rem 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+  transition: all .5s ease-in-out;
+}
+
+.col__3:hover {
+  border: none;
+}
+
+.col__3 h3 {
+  color: var(--light-white);
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.col__3 p {
+  color: var(--white);
+  font-size: 2rem;
+  width: 50%;
+}
+
+.col__3 a {
+  text-transform: uppercase;
+  color: var(--white);
+  border: .2rem solid var(--white);
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+
+.col__3 a:hover {
+  color: var(--black);
+  border: .2rem solid var(--black);
+}
+
+.col__3 .blur_bg:hover {
+  opacity: 1;
+  -webkit-filter: blur(1px);
+  filter: blur(5px);
+}
+
+.col__4 {
+  position: absolute;
+  background: url(../Assets/sale_bg.png);
+  background-size: cover;
+  border-radius: .5rem;
+  background-position: center;
+  min-width: 720px;
+  height: 50vh;
+  top: 65%;
+  left: 28.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transition: all 0.3s ease-in-out; 
+  opacity: .87;
+}
+
+.col__4 .blur_bg {
+  position: absolute;
+  background: url(../Assets/sale_bg.png);
+  background-size: cover;
+  border-radius: .5rem;
+  background-position: center;
+  min-width: 720px;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  opacity: 0;
+  transition: all .5s linear;
+}
+
+.col__4 .blur_bg:hover {
+  opacity: 1;
+  filter: blur(5px);
+}
+
+.col__4 h3 {
+  font-size: 16rem;
+  font-family: 'Elsie Swash Caps', cursive;
+  text-transform: uppercase;
+  position: absolute;
+  top: 18%;
+}
+
+.col__4 span {
+  font-size: 4rem;
+  text-transform: uppercase;
+  top: 49%;
+  left: 27%;
+  position: absolute;
+  letter-spacing: 1px;
+}
+
+.col__4 button {
+  position: absolute;
+  top: 52%;
+  right: 26%;
+  font-family: 'Metamorphous', cursive;
+  font-weight: 100;
+  font-size: 6rem;
+  color: var(--white);
+  padding: .4rem 3rem;
+  background-color: transparent;
+  border: .4rem solid var(--white);
 }
