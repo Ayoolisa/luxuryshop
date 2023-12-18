@@ -52,3 +52,15 @@ function handleNextSlide() {
   translateX -= 100; // Adjust the value as needed
   slideWrapper.style.transform = `translateX(${translateX}px)`;
 }
+
+// Click event handler for gallery items
+const galleryItems = document.querySelectorAll('.image_gallery .image_card');
+galleryItems.forEach(item => {
+  const heartIcon = item.querySelector('.heart-icon');
+  const cartText = item.querySelector('.cart-text');
+  
+  heartIcon.addEventListener('click', () => {
+    heartIcon.classList.toggle('fav_heart');
+    cartText.textContent = 'Added to cart';
+  });
+});
