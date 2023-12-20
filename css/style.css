@@ -1146,13 +1146,22 @@ li, a {
   flex-direction: row;
   border-bottom: .15px solid var(--light-white);
   margin-top: 3em;
-  padding-bottom: 13rem;
+  padding-bottom: 12rem;
   width: 100%;
 }
 
 .footer__content h3 {
   font-size: 2rem;
   line-height: 3rem;
+}
+
+.footer__content h3::after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 4px;
+  transition: width .3s;
+  border-bottom: 4px solid var(--light-white);
 }
 
 .footer__content ul {
@@ -1186,6 +1195,10 @@ li, a {
   text-transform: none;
 }
 
+.footer__content__3 ul li a:hover {
+  margin-left: .3rem;
+}
+
 .form_container {
   display: flex;
   flex-direction: column;
@@ -1195,6 +1208,14 @@ li, a {
 .form_container h3 {
   font-size: 2rem;
   margin-bottom: .5rem;
+}
+
+.form_container h3::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  transition: width .3s;
 }
 
 .form_container p {
@@ -1240,7 +1261,7 @@ li, a {
 .closing_footer {
   display: flex;
   color: var(--light-white);
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .secure-payment {
